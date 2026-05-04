@@ -1,0 +1,178 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+
+    /* education style gradient */
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6dd5ed);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* =========================
+   FLOATING BACKGROUND SHAPES
+========================= */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 15%;
+}
+
+body::after {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 15%;
+    animation-duration: 8s;
+}
+
+/* floating animation */
+@keyframes float {
+    0% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(25px) translateX(10px); }
+    100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   GLASS FORM BOX
+========================= */
+.form-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 380px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+
+    /* page load animation */
+    animation: slideUp 0.8s ease-out;
+}
+
+/* slide animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TITLE
+========================= */
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* placeholder */
+.input-group input::placeholder {
+    color: #e0e0e0;
+}
+
+/* focus animation */
+.input-group input:focus {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,198,255,0.6);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover effect */
+.form-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* click effect */
+.form-box button:active {
+    transform: scale(0.97);
+}
+
+/* shine effect */
+.form-box button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transition: 0.5s;
+}
+
+.form-box button:hover::before {
+    left: 100%;
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+.form-box p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
