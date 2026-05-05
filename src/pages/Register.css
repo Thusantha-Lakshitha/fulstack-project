@@ -1,9 +1,9 @@
 
-body {
+.register-page {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
 
     /* education style gradient */
     background: linear-gradient(135deg, #1e3c72, #2a5298, #6dd5ed);
@@ -17,8 +17,8 @@ body {
 /* =========================
    FLOATING BACKGROUND SHAPES
 ========================= */
-body::before,
-body::after {
+.register-page::before,
+.register-page::after {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -26,14 +26,14 @@ body::after {
     animation: float 6s ease-in-out infinite;
 }
 
-body::before {
+.register-page::before {
     width: 300px;
     height: 300px;
     top: 10%;
     left: 15%;
 }
 
-body::after {
+.register-page::after {
     width: 200px;
     height: 200px;
     bottom: 10%;

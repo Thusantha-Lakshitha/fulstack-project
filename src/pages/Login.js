@@ -37,7 +37,8 @@ function Login({ onGoRegister }) {
     };
 
     return (
-        <div className="container">
+        <div className="login-page">
+            <div className="container">
             <div className="form-box">
                 <h2>Student Login</h2>
 
@@ -66,9 +67,10 @@ function Login({ onGoRegister }) {
 
                 <p>
                     Don't have an account?{" "}
-                    <button type="button" onClick={onGoRegister}>Register</button>
+                   <a href="Register"> <button type="button" onClick={onGoRegister}>Register</button></a>
                 </p>
             </div>
+        </div>
         </div>
     );
 }

@@ -1,0 +1,65 @@
+.dashboard-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dashboard-content {
+  padding: 24px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  
+}
+.dashboard-content h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  margin-left: 200px;
+  margin-top: 90px;
+}
+.dashboard-content p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  margin-left: -500px;
+  text-align: center;
+  color:aliceblue;
+}
+.dashboard-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+    margin-left: 400px;
+}
+.dashboard-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* BOTH buttons same base style */
+.dashboard-buttons button {
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+/* Primary (Get Started) */
+.contact-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Secondary (Read More) */
+.explore-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover (same effect for both) */
+.dashboard-buttons button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}

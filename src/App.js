@@ -1,18 +1,24 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/navbar";
+import Dashboard from "./pages/Dashbord";
 import Login from "./pages/Login";
-import Register from "./pages/Register"; 
+import Register from "./pages/Register";
+import Footer from "./components/footer";
 
 function App() {
-  const [page, setPage] = React.useState("login");
-
   return (
-    <div>
-      {page === "login" ? (
-        <Login onGoRegister={() => setPage("register")} />
-      ) : (
-        <Register onGoLogin={() => setPage("login")} />
-      )}
-    </div>
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   );
 }
 

@@ -88,9 +88,10 @@ function Register({ onGoLogin }) {
       });
   };
 
-  return (
+    return (
     // Centered container for simple register UI
-    <div className="container">
+    <div className="register-page">
+      <div className="container">
       <div className="form-box">
         {/* Page heading */}
         <h2>Register</h2>
@@ -161,9 +162,10 @@ function Register({ onGoLogin }) {
 
         <p>
           Already have an account?{" "}
-          <button type="button" onClick={onGoLogin}>Login</button>
+         <a href="Login"> <button type="button" onClick={onGoLogin}>Login</button></a>
         </p>
       </div>
+    </div>
     </div>
   );
 }
