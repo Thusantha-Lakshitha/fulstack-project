@@ -97,7 +97,10 @@ function Navbar(){
           <NavLink to="/teacher" className={getNavClass}>Teachers</NavLink>
           {role === "ADMIN" ? <NavLink to="/admin" className={getNavClass}>Admin</NavLink> : null}
           <NavLink to="/about" className={getNavClass}>About Us</NavLink>
-          <NavLink to="/contact" className={getNavClass}>Contact</NavLink>
+          <NavLink to="/support" className={getNavClass}>Support</NavLink>
+          <NavLink to="/help-center" className={getNavClass}>Help Center</NavLink>
+          <NavLink to="/privacy-policy" className={getNavClass}>Privacy Policy</NavLink>
+          <NavLink to="/terms" className={getNavClass}>Terms & Conditions</NavLink>
         </div>
 
         <div className="search-box">

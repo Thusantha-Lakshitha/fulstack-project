@@ -19,6 +19,7 @@ import Students from "./Students";
 import ManageTeachers from "./ManageTeachers";
 import ManageCourses from "./ManageCourses";
 import Payments from "./Payments";
+import ContactMessages from "./ContactMessages";
 import { clearAuthSession } from "../services/userService";
 import { useNavigate } from "react-router-dom";
 
@@ -28,6 +29,7 @@ const dashboardTabs = [
   { key: "teachers", label: "Teachers" },
   { key: "courses", label: "Courses" },
   { key: "enrollments", label: "Enrollments" },
+  { key: "support-messages", label: "Support Messages" },
 ];
 
 const metricCards = [
@@ -88,6 +90,10 @@ function AdminDashboard() {
 
     if (activeSection === "enrollments") {
       return <Payments onStatsRefresh={loadStats} />;
+    }
+
+    if (activeSection === "support-messages") {
+      return <ContactMessages onStatsRefresh={loadStats} />;
     }
 
     return (

@@ -10,7 +10,10 @@ import CourseDetails from "./pages/CourseView";
 import CourseDetailsNew from "./pages/CourseDetails";
 import Teachers from "./pages/Teacher";
 import About from "./pages/About";
-import Contact from "./pages/contact";
+import Support from "./pages/Support";
+import HelpCenter from "./pages/HelpCenter";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 import Enroll from "./pages/enroll";
 import SearchResults from "./pages/SearchResults";
 import ReadMore from "./pages/ReadMore";
@@ -36,7 +39,11 @@ function AppShell() {
         <Route path="/courses/:id" element={<CourseDetailsNew />} />
         <Route path="/teacher" element={<Teachers />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Support />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

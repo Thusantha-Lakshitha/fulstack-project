@@ -1,8 +1,8 @@
 import { useState } from "react";
 import contactMessagesService from "../services/contactMessagesService";
-import "./contact.css";
+import "./Support.css";
 
-function Contact() {
+function Support() {
   const [form, setForm] = useState({
     name: localStorage.getItem("username") || "",
     email: localStorage.getItem("email") || "",
@@ -59,23 +59,26 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
-      <h1>Contact Us</h1>
+    <div className="support-page-container">
+      <h1>Support Center</h1>
 
       {success && <p className="success-msg" role="alert">Your message has been sent successfully.</p>}
-      {error && <p className="error-msg" role="alert" style={{ color: "#ef4444", marginBottom: "1rem", fontWeight: "600" }}>{error}</p>}
+      {error && <p className="error-msg" role="alert">{error}</p>}
 
-      <div className="contact-container">
+      <div className="support-content-layout">
         {/* LEFT */}
-        <div className="contact-info">
-          <h3>Get in Touch</h3>
-          <p>📧 info@tledu.com</p>
-          <p>📞 +94 77 123 4567</p>
-          <p>📍 Colombo, Sri Lanka</p>
+        <div className="support-info-panel">
+          <h3>Contact Support</h3>
+          <p>If you have any questions, feedback, or issues with course enrollment or payments, send us a message and our support team will get back to you as soon as possible.</p>
+          <div className="contact-details-list">
+            <p>📧 support@tledu.com</p>
+            <p>📞 +94 77 123 4567</p>
+            <p>📍 Colombo, Sri Lanka</p>
+          </div>
         </div>
 
         {/* RIGHT FORM */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="support-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -119,7 +122,7 @@ function Contact() {
       </div>
 
       {/* MAP */}
-      <div className="map">
+      <div className="support-map">
         <iframe
           title="map"
           src="https://maps.google.com/maps?q=colombo&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -129,4 +132,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Support;

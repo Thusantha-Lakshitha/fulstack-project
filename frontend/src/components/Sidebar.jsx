@@ -7,6 +7,7 @@ import {
   UserCheck,
   Book,
   Clipboard,
+  MessageSquare,
 } from "react-feather";
 import {
   Box,
@@ -29,6 +30,7 @@ const navigation = [
   { key: "teachers", label: "Teachers", icon: <UserCheck size={18} /> },
   { key: "courses", label: "Courses", icon: <Book size={18} /> },
   { key: "enrollments", label: "Enrollments", icon: <Clipboard size={18} /> },
+  { key: "support-messages", label: "Support Messages", icon: <MessageSquare size={18} /> },
 ];
 
 function Sidebar({ open, activeSection, onSectionChange, onLogout, mobileOpen, onCloseMobile }) {

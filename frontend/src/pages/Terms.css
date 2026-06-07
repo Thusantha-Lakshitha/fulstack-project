@@ -1,0 +1,68 @@
+.terms-page-container {
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding-bottom: 5rem;
+}
+
+.terms-header-banner {
+  background: 
+    radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.1), transparent 45%),
+    linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 5rem 2rem 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+.terms-header-banner h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.terms-header-banner p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.terms-content {
+  max-width: 800px;
+  margin: 3rem auto 0 auto;
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.terms-section {
+  margin-bottom: 2.5rem;
+}
+
+.terms-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 0.5rem;
+}
+
+.terms-section p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.terms-section ul {
+  padding-left: 1.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.terms-section li {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
