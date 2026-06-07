@@ -1,0 +1,158 @@
+.teachers {
+  min-height: 100vh;
+  padding: 56px 24px 76px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 12%, rgba(0, 198, 255, 0.18), transparent 35%),
+    linear-gradient(135deg, #0b132b 0%, #1c2541 45%, #3a506b 100%);
+}
+
+.teachers h1 {
+  margin: 0;
+  color: #f4f8ff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.teachers h1::after {
+  content: "Meet our expert mentors and industry trainers";
+  display: block;
+  margin-top: 12px;
+  color: rgba(231, 242, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.teacher-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 40px auto 0;
+}
+
+/* Card */
+.teacher-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 24px 20px 26px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #ffffff;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.teacher-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(0, 212, 255, 0.2), rgba(255, 255, 255, 0.06));
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.32);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.teacher-card:hover::before {
+  opacity: 1;
+}
+
+.teacher-card h3,
+.teacher-card p,
+.teacher-card .avatar,
+.teacher-card button {
+  position: relative;
+}
+
+.teacher-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.teacher-card p {
+  margin: 6px 0;
+  color: rgba(236, 244, 255, 0.9);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.view-profile-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.view-profile-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,114,255,0.28);
+}
+/* Avatar */
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  font-size: 42px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(255, 255, 255, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* Button */
+.teacher-card button {
+  margin-top: 14px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #00d4ff, #00a3ff);
+  color: #061222;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 163, 255, 0.35);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.teacher-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 163, 255, 0.45);
+}
+
+.teacher-card button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .teachers {
+    padding: 42px 16px 56px;
+  }
+
+  .teacher-container {
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .teacher-card {
+    padding: 22px 18px 24px;
+  }
+}

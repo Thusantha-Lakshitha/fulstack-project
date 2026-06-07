@@ -1,0 +1,91 @@
+.company-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+
+  /* gradient background */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TITLE */
+.company-page h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* INTRO TEXT */
+.intro {
+  text-align: center;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  opacity: 0.9;
+}
+
+/* SECTIONS GRID */
+.section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.section:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* SECTION TITLE */
+.section h2 {
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+/* LIST STYLE */
+.section ul {
+  padding-left: 20px;
+}
+
+.section li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* ANIMATION (fade in) */
+.company-page {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .company-page h1 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 18px;
+  }
+}

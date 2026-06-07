@@ -1,0 +1,6 @@
+.search-results { padding: 36px; }
+.search-results h1 { margin-bottom: 18px; }
+.search-results section { margin-top: 18px; }
+.search-results ul { list-style: none; padding: 0; }
+.search-results li { padding: 10px 0; border-bottom: 1px solid #eee; }
+.search-results li p { margin: 6px 0 0; color: #555; }

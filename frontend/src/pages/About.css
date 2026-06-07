@@ -1,0 +1,160 @@
+.about {
+  min-height: 100vh;
+  padding: 0 24px 72px;
+  font-family: 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(109, 213, 237, 0.18), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #1e3c72 48%, #2a5298 100%);
+}
+
+/* HERO */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  padding: 88px 20px 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 0;
+}
+
+.about-hero h1,
+.about-hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.about-hero h1::after {
+  content: "Learning designed for real-world growth";
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-hero p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* CONTENT */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 0 24px;
+  margin-top: 100px;}
+
+/* BOXES */
+.about-box {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  width: 100%;
+  padding: 26px 22px 28px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.about-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(255, 255, 255, 0.05));
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.28);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.about-box:hover::before {
+  opacity: 1;
+}
+
+.about-box h2,
+.about-box p {
+  position: relative;
+  z-index: 1;
+}
+
+.about-box h2 {
+  margin: 0 0 12px;
+  color: #dff8ff;
+  font-size: 1.3rem;
+}
+
+.about-box h2::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 4px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00d4ff, #6dd5ed);
+}
+
+.about-box p {
+  margin: 0;
+  color: rgba(245, 250, 255, 0.88);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 0 16px 56px;
+  }
+
+  .about-hero {
+    padding: 68px 12px 52px;
+  }
+
+  .about-hero::before {
+    inset: 8px;
+    border-radius: 22px;
+  }
+
+  .about-content {
+    gap: 18px;
+  }
+
+  .about-box {
+    padding: 22px 18px 24px;
+  }
+}

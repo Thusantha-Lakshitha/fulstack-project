@@ -1,0 +1,96 @@
+/* same design as register page */
+
+.login-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6dd5ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page .container {
+    position: relative;
+    z-index: 1;
+}
+
+.login-page .form-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 380px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+    animation: loginSlideUp 0.8s ease-out;
+}
+
+@keyframes loginSlideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-page .form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-page .input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.login-page .input-group input::placeholder {
+    color: #ddd;
+}
+
+.login-page .input-group input:focus {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,198,255,0.6);
+}
+
+.login-page .form-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-page .form-box button:hover {
+    transform: scale(1.05);
+}
+
+.login-page .form-box p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.switch-link {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.switch-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
